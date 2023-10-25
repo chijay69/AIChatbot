@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>CHATBOT</title>
+      <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+  </head>
+  <body>
+    <div class="chat-container"><h1>WEBCHAT</h1></div>
+    <div id="webchat">HI</div>
+    <script src="https://storage.googleapis.com/mrbot-cdn/webchat-0.4.1.js"></script>
+    <script>
+    WebChat.default.init({
+      selector: "#webchat",
+      initPayload: "/get_started",
+      interval: 1000, // 1000 ms between each message
+      customData: {"userId": "123"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+      socketUrl: "http://localhost:5005",
+      socketPath: "/socket.io/",
+      title: "Title",
+      subtitle: "Subtitle",
+      profileAvatar: "http://to.avat.ar",
+    })
+    </script>
+  </body>
+</html>
